@@ -12,12 +12,28 @@ This guide explains how to collaborate on your capstone project using GitHub. **
 Main Repository (Praxis-High-School/intro-to-ai-lv10-2025)
 ├── README.md (this file)
 ├── Group1/     (Group 1's workspace)
+│   ├── README.md (project README with data collection docs)
+│   ├── capstone_notebook.ipynb
+│   ├── data/ (optional: training dataset)
+│   └── models/ (optional: trained models)
 ├── Group2/     (Group 2's workspace)
+│   ├── README.md
+│   ├── capstone_notebook.ipynb
+│   └── (optional: data/, models/)
 ├── Group3/     (Group 3's workspace)
+│   ├── README.md
+│   ├── capstone_notebook.ipynb
+│   └── (optional: data/, models/)
 └── Group4/     (Group 4's workspace)
+    ├── README.md
+    ├── capstone_notebook.ipynb
+    └── (optional: data/, models/)
 ```
 
-**Important**: Each group works in their own folder. Don't modify other groups' folders!
+**Important**: 
+- Each group works in their own folder. Don't modify other groups' folders!
+- **Data collection documentation goes in your Group README.md** (not in the notebook)
+- Training dataset and model files can be in your folder or linked in README
 
 ---
 
@@ -359,13 +375,22 @@ Before Session 10, make sure:
 - [ ] Your group has forked the repository
 - [ ] All group members are added as collaborators to the fork
 - [ ] All notebook sections are complete in your group folder
-- [ ] README.md is in your group folder with setup instructions
+- [ ] README.md is in your group folder with:
+  - Setup instructions
+  - **Data collection documentation** (required - not in notebook)
+  - Links to training dataset (if stored elsewhere)
+  - Links to trained model files (if stored elsewhere)
+- [ ] Training dataset collected and organized (or link provided in README)
+- [ ] Trained model files saved (or link provided in README)
+- [ ] Class mapping file saved (or link provided in README)
 - [ ] All code is committed and pushed to your group's fork
 - [ ] Pull request created from your fork to main repository
 - [ ] Pull request is merged (or ready for review)
 - [ ] No API keys are in the code
 - [ ] All group members have contributed
 - [ ] Your group folder contains: `capstone_notebook.ipynb` and `README.md`
+- [ ] Optional: `data/` folder with training images (or link in README)
+- [ ] Optional: `models/` folder with trained model files (or link in README)
 - [ ] Repository link is ready for presentation: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
 
 ---
