@@ -2,14 +2,14 @@
 
 ## Overview
 
-This guide explains how to collaborate on your capstone project using GitHub. **All groups will work in a single shared repository** to learn collaboration. Each group has their own folder (Group1, Group2, Group3, Group4) where they will place their capstone project files.
+This guide explains how to collaborate on your capstone project using GitHub. **Each group will create ONE fork** of the shared repository, and all group members will work together on that fork. This teaches you real-world collaboration workflows.
 
-**Repository**: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
+**Main Repository**: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
 
 ## Repository Structure
 
 ```
-intro-to-ai-lv10-2025/
+Main Repository (Praxis-High-School/intro-to-ai-lv10-2025)
 ├── README.md (this file)
 ├── Group1/     (Group 1's workspace)
 ├── Group2/     (Group 2's workspace)
@@ -19,23 +19,58 @@ intro-to-ai-lv10-2025/
 
 **Important**: Each group works in their own folder. Don't modify other groups' folders!
 
-## Step 1: Clone the Shared Repository
+---
 
-**Everyone** should:
+## Step 1: Fork the Repository (One Person Per Group)
 
-1. Go to the repository: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
-2. Click the green "Code" button
-3. Copy the repository URL
+**One person in your group** should fork the repository:
+
+1. Go to: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
+2. Click the **"Fork"** button (top right corner)
+3. Choose where to fork (usually your personal GitHub account)
+4. Click "Create fork"
+
+**Result**: You now have your own copy of the repository (e.g., `your-username/intro-to-ai-lv10-2025`)
+
+**Note**: Only ONE person per group needs to fork. Everyone else will work on that fork.
+
+---
+
+## Step 2: Add Group Members as Collaborators
+
+**The person who forked** should add all group members:
+
+1. Go to **your fork** (not the original repository)
+2. Click **"Settings"** → **"Collaborators"**
+3. Click **"Add people"**
+4. Add all group members by their GitHub usernames
+5. Everyone accepts the invitation (check your email or GitHub notifications)
+
+**Result**: All group members can now push to the fork and collaborate together.
+
+---
+
+## Step 3: Clone Your Group's Fork
+
+**Everyone in the group** should:
+
+1. Go to **your group's fork** (the one created in Step 1)
+2. Click the green **"Code"** button
+3. Copy the repository URL (HTTPS)
 4. Open terminal/command prompt
 5. Run:
    ```bash
-   git clone https://github.com/Praxis-High-School/intro-to-ai-lv10-2025.git
+   git clone https://github.com/your-username/intro-to-ai-lv10-2025.git
    cd intro-to-ai-lv10-2025
    ```
 
-**Note**: The repository is already set up. You don't need to create a new one!
+**Replace `your-username`** with the GitHub username of the person who forked.
 
-## Step 2: Navigate to Your Group Folder
+**Result**: You now have a local copy of your group's fork.
+
+---
+
+## Step 4: Navigate to Your Group Folder
 
 After cloning, navigate to your group's folder:
 
@@ -55,78 +90,142 @@ cd Group4
 
 **Remember**: Work only in your group's folder. Don't modify other groups' work!
 
-## Step 3: Create a Branch for Your Work
+---
+
+## Step 5: Set Up Remote Tracking (Optional but Recommended)
+
+To keep your fork updated with the main repository:
+
+```bash
+# Go back to repository root
+cd ..
+
+# Add the main repository as "upstream"
+git remote add upstream https://github.com/Praxis-High-School/intro-to-ai-lv10-2025.git
+
+# Verify remotes
+git remote -v
+```
+
+You should see:
+- `origin`: Your group's fork
+- `upstream`: The main repository
+
+---
+
+## Step 6: Create a Branch for Your Work
 
 **Before making changes**, create a branch:
 
 ```bash
+# Make sure you're in the repository root
+cd intro-to-ai-lv10-2025
+
+# Navigate to your group folder
+cd GroupX  # Replace X with your group number
+
+# Create and switch to a new branch
 git checkout -b your-name-work
 # Example: git checkout -b john-notebook-section
-# Example: git checkout -b sarah-data-collection
 ```
 
-This keeps your work separate from others.
+**Why branches?**
+- Keeps your work separate from others
+- Allows multiple people to work simultaneously
+- Makes it easier to review changes
 
-## Step 4: Make Your Changes
+---
 
-1. Work on your notebook or files
+## Step 7: Make Your Changes
+
+1. Work on your notebook or files in your group folder
 2. Save your changes
 3. Test that everything works
 
-## Step 5: Commit Your Changes
+**Remember**: 
+- Work in your group folder only (Group1, Group2, Group3, or Group4)
+- Don't modify files outside your group folder
+
+---
+
+## Step 8: Commit Your Changes
 
 When you're ready to save your work:
 
 ```bash
-# Add your changes
-git add .
+# Make sure you're in the repository root (not just group folder)
+cd /path/to/intro-to-ai-lv10-2025
 
+# Add your changes
+git add GroupX/  # Replace X with your group number
 # Or add specific files
-git add capstone_notebook.ipynb
-git add README.md
+git add GroupX/capstone_notebook.ipynb
+git add GroupX/README.md
 
 # Commit with a message
-git commit -m "Added data collection section to notebook"
+git commit -m "Added data collection section to GroupX notebook"
 ```
 
 **Good commit messages**:
-- "Added model training section"
-- "Updated README with setup instructions"
-- "Fixed preprocessing code"
-- "Added design thinking summary"
-- "Improved model accuracy with fine-tuning"
+- "Added model training section to Group1"
+- "Updated Group2 README with setup instructions"
+- "Fixed preprocessing code in Group3"
+- "Added design thinking summary to Group4"
 
-## Step 6: Push Your Changes
+---
 
-Push your branch to GitHub:
+## Step 9: Push Your Changes
+
+Push your branch to your group's fork:
 
 ```bash
 git push origin your-name-work
 ```
 
-## Step 7: Create a Pull Request
+**Result**: Your changes are now on GitHub in your group's fork.
 
-When you're ready to merge your branch:
+---
 
-1. Go to the repository on GitHub: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
-2. You should see a banner suggesting to create a pull request for your branch
-3. Click "Compare & pull request"
-4. Write a description of your changes (e.g., "Added Group1 capstone notebook")
-5. Make sure the base branch is `main` and compare branch is your branch
-6. Click "Create pull request"
-7. Wait for review (instructor or group member can review)
-8. Once approved, click "Merge pull request"
+## Step 10: Create a Pull Request to Main Repository
 
-## Step 8: Update Your Local Copy
+When you're ready to merge your work to the main repository:
 
-**After someone merges changes**, update your local copy:
+1. Go to **your group's fork** on GitHub
+2. You should see a banner: "your-name-work had recent pushes"
+3. Click **"Compare & pull request"**
+4. **Important**: 
+   - Base repository: `Praxis-High-School/intro-to-ai-lv10-2025` (main branch)
+   - Head repository: `your-username/intro-to-ai-lv10-2025` (your branch)
+5. Write a description:
+   - What did you add/change?
+   - Which group folder?
+   - Any important notes?
+6. Click **"Create pull request"**
+7. Wait for instructor review and merge
+
+**Result**: Your work will be merged into the main repository after review.
+
+---
+
+## Step 11: Update Your Local Copy
+
+**After someone merges changes** (or to get updates from main repository):
 
 ```bash
+# Switch to main branch
 git checkout main
+
+# Pull latest changes from your fork
 git pull origin main
+
+# (Optional) Get updates from main repository
+git fetch upstream
+git merge upstream/main
 ```
 
-This gets the latest changes from others.
+**Result**: Your local copy is up to date.
+
+---
 
 ## Collaboration Best Practices
 
@@ -138,6 +237,7 @@ This gets the latest changes from others.
 - **Commit often**: Save your work regularly
 - **Write clear messages**: Explain what you changed
 - **Test before commit**: Make sure your code works
+- **Work in your group folder**: Don't touch other groups' folders
 
 ### ❌ Don'ts
 
@@ -146,6 +246,9 @@ This gets the latest changes from others.
 - **Don't work on same file simultaneously**: Coordinate with your group
 - **Don't force push**: Can overwrite others' work
 - **Don't commit large files**: Use Git LFS if needed
+- **Don't modify other groups' folders**: Stay in your own folder
+
+---
 
 ## Resolving Conflicts
 
@@ -170,6 +273,8 @@ If you get a **merge conflict**:
    git commit -m "Resolved merge conflict"
    ```
 
+---
+
 ## Common Git Commands
 
 ```bash
@@ -188,15 +293,53 @@ git checkout branch-name
 # Create new branch
 git checkout -b new-branch-name
 
-# Discard local changes (be careful!)
-git checkout -- filename
-
 # See all branches
 git branch
 
 # Delete a branch (after merging)
 git branch -d branch-name
+
+# See remote repositories
+git remote -v
+
+# Update from upstream (main repository)
+git fetch upstream
+git merge upstream/main
 ```
+
+---
+
+## Workflow Summary
+
+**Daily workflow for group members**:
+
+```bash
+# 1. Get latest changes
+cd intro-to-ai-lv10-2025
+git checkout main
+git pull origin main
+
+# 2. Create branch for your work
+git checkout -b my-feature
+
+# 3. Navigate to your group folder
+cd GroupX  # Your group number
+
+# 4. Make changes
+# ... edit files ...
+
+# 5. Commit changes
+cd ..  # Back to repo root
+git add GroupX/
+git commit -m "Description of changes"
+
+# 6. Push to your group's fork
+git push origin my-feature
+
+# 7. Create pull request on GitHub (from your fork to main repo)
+```
+
+---
 
 ## Getting Help
 
@@ -207,40 +350,37 @@ If you're stuck:
 3. **Ask your group**: Someone might know the answer
 4. **Ask instructor**: During mentoring session or class
 
+---
+
 ## Final Submission Checklist
 
 Before Session 10, make sure:
 
+- [ ] Your group has forked the repository
+- [ ] All group members are added as collaborators to the fork
 - [ ] All notebook sections are complete in your group folder
 - [ ] README.md is in your group folder with setup instructions
-- [ ] All code is committed and pushed to the shared repository
-- [ ] All changes are merged to main branch via pull request
+- [ ] All code is committed and pushed to your group's fork
+- [ ] Pull request created from your fork to main repository
+- [ ] Pull request is merged (or ready for review)
 - [ ] No API keys are in the code
 - [ ] All group members have contributed
 - [ ] Your group folder contains: `capstone_notebook.ipynb` and `README.md`
 - [ ] Repository link is ready for presentation: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
 
+---
+
 ## Quick Reference
 
-**Daily workflow**:
-```bash
-cd intro-to-ai-lv10-2025     # Navigate to repository
-cd GroupX                     # Go to your group folder (replace X with your group number)
-git pull origin main          # Get latest changes
-git checkout -b my-work       # Create branch for your work
-# ... make changes in your group folder ...
-git add GroupX/               # Add your group's changes
-git commit -m "Description"
-git push origin my-work       # Push your branch
-# Create pull request on GitHub
-```
+**Repository Links**:
+- Main Repository: https://github.com/Praxis-High-School/intro-to-ai-lv10-2025
+- Your Group's Fork: `https://github.com/your-username/intro-to-ai-lv10-2025`
 
-**Important Notes**:
-- Always work in your group's folder (Group1, Group2, Group3, or Group4)
-- Don't modify files outside your group folder
-- Pull latest changes before starting work each day
-- Create branches for your individual contributions
-- Use pull requests to merge your work
+**Key Points**:
+- One fork per group (not per person)
+- All group members work on the same fork
+- Create branches for individual work
+- Use pull requests to merge to main repository
+- Work only in your group folder
 
 **Good luck with your collaboration! 🚀**
-
