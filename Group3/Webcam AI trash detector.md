@@ -4,6 +4,7 @@
 AI yang dapat mendeteksi sampah di kelas dengan kamera(WebCam/CCTV)
 
 ------------------------------Detail-------------------------------
+
 **1. EMPATHIZE (Memahami Masalah & User)**
 - *User*
   Semua pihak yang ada di sekolah
