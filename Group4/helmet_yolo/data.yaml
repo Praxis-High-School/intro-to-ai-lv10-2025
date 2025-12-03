@@ -1,0 +1,5 @@
+
+train: /content/drive/MyDrive/helmet_yolo/images/train
+val: /content/drive/MyDrive/helmet_yolo/images/val
+nc: 2
+names: ["person", "helmet"]
