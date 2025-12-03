@@ -1,0 +1,39 @@
+{
+  "class_indices": {
+    "Asytar": 0,
+    "Athar": 1,
+    "Banyu": 2,
+    "Bima": 3,
+    "Fauzan": 4,
+    "Hanum": 5,
+    "Ivan": 6,
+    "Java": 7,
+    "Kak Asma": 8,
+    "Nizam": 9,
+    "Pathya": 10,
+    "Raffasya": 11,
+    "Tristan": 12,
+    "Zaydan": 13
+  },
+  "class_names": [
+    "Asytar",
+    "Athar",
+    "Banyu",
+    "Bima",
+    "Fauzan",
+    "Hanum",
+    "Ivan",
+    "Java",
+    "Kak Asma",
+    "Nizam",
+    "Pathya",
+    "Raffasya",
+    "Tristan",
+    "Zaydan"
+  ],
+  "num_classes": 14,
+  "model_path": "/content/drive/MyDrive/Data(AI)/models/face_model_20251202_035305.h5",
+  "timestamp": "20251202_035305",
+  "training_samples": 94,
+  "validation_samples": 17
+}
