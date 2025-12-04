@@ -1,0 +1,33 @@
+{
+  "num_classes": 10,
+  "classes": [
+    "aggressive_pose",
+    "falling_down",
+    "fighting_stance",
+    "grabbing_motion",
+    "normal_sitting",
+    "normal_standing",
+    "normal_walking",
+    "pushing_motion",
+    "raised_arms",
+    "rapid_movement"
+  ],
+  "class_distribution": {
+    "aggressive_pose": 5,
+    "falling_down": 4,
+    "fighting_stance": 5,
+    "grabbing_motion": 5,
+    "normal_sitting": 5,
+    "normal_standing": 5,
+    "normal_walking": 5,
+    "pushing_motion": 5,
+    "raised_arms": 5,
+    "rapid_movement": 5
+  },
+  "total_images": 49,
+  "image_size": [
+    224,
+    224
+  ],
+  "preprocessing": "resize_224x224, normalize_0-1"
+}
